@@ -4,7 +4,7 @@ var event;
 form.addEventListener('submit',(e)=>{
 const choice=document.querySelector('input[name=app]:checked').value;
 const data={app: choice};
-fetch('http://localhost:3000/poll',{
+fetch('https://apppoll.herokuapp.com/poll',{
     method:'post',
     body: JSON.stringify(data),
     headers:new Headers({
@@ -16,7 +16,7 @@ fetch('http://localhost:3000/poll',{
 e.preventDefault()
 })
 
-fetch("http://localhost:3000/poll")
+fetch("https://apppoll.herokuapp.com/poll")
     .then(res => res.json())
     .then(data => {
         let votes = data.votes;
