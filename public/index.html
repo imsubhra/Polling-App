@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polling App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>.hidden { display: none; }</style>
+
+</head>
+<body>
+<div class="container">
+  <h1>Social Media App Vote</h1>
+  <p>Vote for your favorite Social Media App</p>
+  <div id="hasVotedAlreadyErrorMsg" class="card-panel hidden" style="width: 30%">
+    <span class="red-text text-darken-2">You have already voted, you can only vote once.</span>
+  </div>
+    <form id="vote-form">
+        <p>
+          <label>
+              <input type="radio" name="app" id="facebook" value="Facebook">
+              <span for="facebook">Facebook</span>
+          </label>
+        <p>
+          <label>
+              <input type="radio" name="app" id="whatsapp" value="Whatsapp">
+              <span for="whatsapp">Whatsapp</span>
+          </label>
+        <p>
+          <label>
+              <input type="radio" name="app" id="instagram" value="Instagram">
+              <span for="instagram">instagram</span>
+          </label>
+        </p>
+        <p>
+          <label>
+              <input type="radio" name="app" id="twitter" value="Twitter">
+              <span for="twitter">Twitter</span>
+          </label>
+        </p>
+        <p>
+            <label>
+                <input type="radio" name="app" id="other" value="Other">
+                <span for="other">Something else</span>
+            </label>
+          </p>
+        <input type="submit" value="Vote" class="btn">
+      </form>
+  
+      <br>
+      <br>
+      <h5 style="text-align: center" id="chartTitle"></h5>
+      <div id="chartContainer" style="height: 300px;width:100%"></div>
+</div>  
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"></script>
+  <script src="https://js.pusher.com/6.0/pusher.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+<script src="main.js"></script>
+
+
+</body>
+</html>
